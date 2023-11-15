@@ -1,0 +1,104 @@
+body {
+    background-image: url("./jogging.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.left {
+    min-width: 40vw;
+    text-align: center;
+}
+
+.right {
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 4.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.timer {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.buttons {
+    padding: 20px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+}
+
+.right:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+li {
+    list-style-type: none;
+    padding: 2px 0;
+    transform: translateX(-20%);
+}
+
+.lap-list {
+    max-height: 120px;
+    /* Set a max height for the list container */
+    overflow-y: auto;
+}
+
+@media (max-width: 950px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        margin-top: 40px;
+    }
+
+    .buttons button {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
